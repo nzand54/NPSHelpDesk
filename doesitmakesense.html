@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<style>
+
+/* .body {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+} */
+
+#NPS {
+    display: flex;
+    justify-content: center
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#response {
+    display: flex;
+    justify-content: center
+}
+
+#help {
+    margin: auto;
+    display: flex
+}
+</style>
+
+
+<h1 id="NPS">Net Promoter System Help Desk</h1>
+
+<img id="image1" src="247support.png" height="150" width="250"></img>
+
+<br>
+<br>
+<br>
+<div id= "response"></div>
+<br>
+<br>
+<button id="help">Can we help you?</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+var helpAnswersArray = ["SHAME", "It is Certain", "Zen Fox", "Ask again Later", "You're too crispy. No.", "LOL", "I'll take a termini coffee pls", "Spicy Squad thinks no", "I can't add you to the net promoter system"]
+
+let getRandomElement = function () {
+    return helpAnswersArray[Math.floor(Math.random() * helpAnswersArray.length)];
+}
+
+// var helpAnswers = getRandomElement()
+
+$("#help").click(function() {
+    $("#response").empty()
+   var helpAnswers = getRandomElement()
+  $("#response").append(helpAnswers)
+});
+
+</script>
+
+</body>
+</html>
